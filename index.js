@@ -1,6 +1,8 @@
+const connectDatabase = require("./config/db");
 const app = require("./src/app");
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
+  connectDatabase();
 });
